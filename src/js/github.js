@@ -7,8 +7,8 @@ class Github{
     }
 
     async fetchUser(user){
-        const datosPerfil = await fetch(`http://api.github.com/users/${user}?client_id=${this.client_id}&cliente_secret=${this.client_secret}`);
-        const datosRepositorio = await fetch(`http://api.github.com/users/${user}/repos??client_id=${this.client_id}&cliente_secret=${this.client_secret}&sort=${this.repoSort}`);
+        const datosPerfil = await fetch(`https://api.github.com/users/${user}?client_id=${this.client_id}&cliente_secret=${this.client_secret}`);
+        const datosRepositorio = await fetch(`https://api.github.com/users/${user}/repos??client_id=${this.client_id}&cliente_secret=${this.client_secret}&sort=${this.repoSort}`);
 
         const responseRepositorios = await datosRepositorio.json();
 
